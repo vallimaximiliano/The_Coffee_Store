@@ -5,7 +5,7 @@ import CartWidget from './CartWidget';
 
 const NavBar = () => {
   return (
-    <Flex>
+    <Flex bg="#2E2422" color="#FFD8B4">
       <Box p="4" bg="#2E2422" color="#FFD8B4">
       <Image
     boxSize='100px'
