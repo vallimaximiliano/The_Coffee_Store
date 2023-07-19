@@ -8,24 +8,24 @@ const NavBar = () => {
     <Flex bg="#2E2422" color="#FFD8B4">
       <Box p="4" bg="#2E2422" color="#FFD8B4">
       <Image
-    boxSize='100px'
+    boxSize='120px'
     objectFit='cover'
     src='../assets/coffeeshoplogo-no-bg.png'
     alt='The Coffee Shop Store'
   />
       </Box>
       <Spacer />
-      <Box>
-      <Menu>
-        <MenuButton as={Button} rightIcon={<ChevronDownIcon />}>
+      <Box padding="10px">
+      <Menu bg="#FFD8B4">
+        <MenuButton bg="#FFD8B4" as={Button} rightIcon={<ChevronDownIcon />}>
           Actions
         </MenuButton>
-        <MenuList>
-          <MenuItem>Cafeteras Expresso</MenuItem>
-          <MenuItem>Cafeteras Cápsulas</MenuItem>
-          <MenuItem>Cápsulas de Café</MenuItem>
-          <MenuItem>Café</MenuItem>
-          <MenuItem>Contacto</MenuItem>
+        <MenuList bg="#FFD8B4">
+          <MenuItem bg="#FFD8B4" color="#2E2422">Cafeteras Expresso</MenuItem>
+          <MenuItem bg="#FFD8B4" color="#2E2422">Cafeteras Cápsulas</MenuItem>
+          <MenuItem bg="#FFD8B4" color="#2E2422">Cápsulas de Café</MenuItem>
+          <MenuItem bg="#FFD8B4" color="#2E2422">Café</MenuItem>
+          <MenuItem bg="#FFD8B4" color="#2E2422">Contacto</MenuItem>
         </MenuList>
       </Menu>
       <Spacer />

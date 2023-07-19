@@ -3,12 +3,14 @@ import React from "react";
 
 const CartWidget = () => {
   return (
-    <Flex>
+    <Flex padding="10px">
       <Box boxSize="40px">
         <Image src="../assets/shop-mug.png" alt="Carrito de compras" />
       </Box>
       <Spacer />
-      <Box>5</Box>
+      <Box fontSize='xl'>
+        <p>5</p>
+        </Box>
     </Flex>
   );
 };
