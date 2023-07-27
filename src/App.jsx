@@ -1,15 +1,17 @@
 import React from 'react'
 import NavBar from './components/NavBar'
 import ItemListContainer from './components/ItemListContainer'
+import ItemCount from './components/ItemCount'
+import Item from './components/Item'
 
 
-const App = () => {
+function App() {
   return (
     <>
-    <NavBar />
-    <ItemListContainer
-    greeting="Bienvenidos a The Coffee Store"
-     />
+      <NavBar />
+      <ItemListContainer />
+      <ItemCount />
+      
     </>
   )
 }
