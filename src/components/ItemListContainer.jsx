@@ -1,6 +1,10 @@
 import React from "react";
 import ItemList from "./ItemList";
 import { Flex } from "@chakra-ui/react";
+// import img1 from "./assets/capsulas-1.jpg";
+// import img2 from "./assets/capsulas-2.jpg";
+// import img4 from "./assets/capsulas-4.jpg";
+
 
 const ItemListContainer = () => {
  
@@ -11,7 +15,7 @@ const products = [
     descripcion:
       "Capsulas Nespresso de 4 sabores diferentes, Moka, Caramel, Vainilla y Forte",
     stock: "10",
-    image: src='../assets/capsulas-1.jpg' 
+    // image: img1
   },
   {
     id: 2,
@@ -19,7 +23,7 @@ const products = [
     descripcion:
       "Capsulas Dolce Gusto de 4 sabores diferentes, Moka, Caramel, Vainilla y Forte",
     stock: "8",
-    image: src='../assets/capsulas-2.jpg' 
+    // image: img2
   },
   {
     id: 3,
@@ -27,7 +31,7 @@ const products = [
     descripcion:
       "Café de Colombia grano premium de intenso sabor y estructura fuerte",
     stock: "6",
-    image: src='../assets/capsulas-4.jpg' 
+    // image: img4
   },
 ];
 console.log(products);

@@ -1,12 +1,12 @@
 import React from 'react'
 import { Card, Image, CardBody, Heading, Text, Stack, CardFooter, Divider, Button, ButtonGroup } from '@chakra-ui/react'
 
-const Item = ( {id, nombre, image, descripcion, stock} ) => {
+const Item = ( {id, nombre,  descripcion, stock} ) => {
   return (
     <Card maxW='sm'>
   <CardBody>
-    <Image>{image}
-    </Image>
+    {/* <Image>{src}
+    </Image> */}
     <Stack mt='6' spacing='3'>
       <Heading size='md'>{nombre}</Heading>
       <Text>
