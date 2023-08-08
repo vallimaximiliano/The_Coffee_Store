@@ -2,9 +2,6 @@ import React from "react";
 import ItemList from "./ItemList";
 import { Flex } from "@chakra-ui/react";
 import { useParams } from "react-router-dom";
-// import img1 from "./assets/capsulas-1.jpg";
-// import img2 from "./assets/capsulas-2.jpg";
-// import img4 from "./assets/capsulas-4.jpg";
 
 const ItemListContainer = () => {
   const { category } = useParams()
@@ -16,7 +13,7 @@ const ItemListContainer = () => {
         "Capsulas Nespresso de 4 sabores diferentes, Moka, Caramel, Vainilla y Forte",
       stock: 10,
       category: "categoria1",
-      // image: img1
+      
     },
     {
       id: 2,
@@ -25,7 +22,7 @@ const ItemListContainer = () => {
         "Capsulas Dolce Gusto de 4 sabores diferentes, Moka, Caramel, Vainilla y Forte",
       stock: 8,
       category: "categoria2",
-      // image: img2
+      
     },
     {
       id: 3,
@@ -34,7 +31,7 @@ const ItemListContainer = () => {
         "Café de Colombia grano premium de intenso sabor y estructura fuerte",
       stock: 6,
       category: "categoria2",
-      // image: img4
+      
     },
     {
       id: 4,
@@ -43,7 +40,7 @@ const ItemListContainer = () => {
         "Café de Colombia grano premium de intenso sabor y estructura fuerte 4",
       stock: 6,
       category: "categoria3",
-      // image: img4
+      
     },
     {
       id: 5,
@@ -52,7 +49,7 @@ const ItemListContainer = () => {
         "Café de Colombia grano premium de intenso sabor y estructura fuerte 5",
       stock: 15,
       category: "categoria4",
-      // image: img4
+      
     },
     {
       id: 6,
@@ -60,8 +57,8 @@ const ItemListContainer = () => {
       descripcion:
         "Café de Colombia grano premium de intenso sabor y estructura fuerte 6",
       stock: 22,
-      category: "categoria6",
-      // image: img4
+      category: "categoria1",
+      
     },
   ];
  
@@ -87,7 +84,7 @@ const ItemListContainer = () => {
     const productosFiltrados = products.filter((products) => products.category === category)
 
   return (
-    <Flex>
+    <Flex bg="#2E2422">
       <ItemList
       products={productosFiltrados}
       />

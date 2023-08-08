@@ -1,8 +1,10 @@
 import React from 'react'
 import ItemDetail from './ItemDetail';
+import { useParams } from 'react-router-dom';
+import { Flex } from '@chakra-ui/react';
 
 const ItemDetailContainer = () => {
-
+  const { id } = useParams()
     const products = [
         {
           id: 1,
@@ -11,7 +13,7 @@ const ItemDetailContainer = () => {
             "Capsulas Nespresso de 4 sabores diferentes, Moka, Caramel, Vainilla y Forte",
           stock: 10,
           category: "categoria1",
-          // image: img1
+         
         },
         {
           id: 2,
@@ -20,7 +22,7 @@ const ItemDetailContainer = () => {
             "Capsulas Dolce Gusto de 4 sabores diferentes, Moka, Caramel, Vainilla y Forte",
           stock: 8,
           category: "categoria2",
-          // image: img2
+          
         },
         {
           id: 3,
@@ -29,7 +31,7 @@ const ItemDetailContainer = () => {
             "Café de Colombia grano premium de intenso sabor y estructura fuerte",
           stock: 6,
           category: "categoria2",
-          // image: img4
+          
         },
         {
           id: 4,
@@ -38,7 +40,7 @@ const ItemDetailContainer = () => {
             "Café de Colombia grano premium de intenso sabor y estructura fuerte 4",
           stock: 6,
           category: "categoria3",
-          // image: img4
+          
         },
         {
           id: 5,
@@ -47,7 +49,7 @@ const ItemDetailContainer = () => {
             "Café de Colombia grano premium de intenso sabor y estructura fuerte 5",
           stock: 15,
           category: "categoria4",
-          // image: img4
+          
         },
         {
           id: 6,
@@ -55,8 +57,8 @@ const ItemDetailContainer = () => {
           descripcion:
             "Café de Colombia grano premium de intenso sabor y estructura fuerte 6",
           stock: 22,
-          category: "categoria6",
-          // image: img4
+          category: "categoria1",
+          
         },
       ];
 
@@ -81,9 +83,11 @@ const ItemDetailContainer = () => {
         
   return (
     <>
-    <ItemDetail
+    <Flex bg="#2E2422">
+    <ItemDetail 
     products={products}
     />
+    </Flex>
     
     </>
   )
