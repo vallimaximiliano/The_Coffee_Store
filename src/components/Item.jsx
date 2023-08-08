@@ -15,7 +15,7 @@ const Item = ( { id, nombre,  descripcion, stock, category } ) => {
       <Text>
         {category}
       </Text>
-      <Text color='blue.600' fontSize='2xl'>
+      <Text color='blue.600' fontSize='2xl'>Stock:
         {stock}
       </Text>
     </Stack>

@@ -25,10 +25,9 @@ const NavBar = () => {
           Actions
         </MenuButton>
         <MenuList bg="#FFD8B4">
-          <MenuItem bg="#FFD8B4" color="#2E2422"><Link to={`/category/${"categoria1"}`}>Cafeteras Expresso</Link></MenuItem>
-          <MenuItem bg="#FFD8B4" color="#2E2422"><Link to={`/category/${"categoria2"}`}>Cafeteras Cápsulas</Link></MenuItem>
-          <MenuItem bg="#FFD8B4" color="#2E2422"><Link to={`/category/${"categoria3"}`}>Cápsulas de Café</Link></MenuItem>
-          <MenuItem bg="#FFD8B4" color="#2E2422"><Link to={`/category/${"categoria4"}`}>Café</Link></MenuItem>
+          <MenuItem bg="#FFD8B4" color="#2E2422"><Link to={"/about"}>Nosotros</Link></MenuItem>
+          <MenuItem bg="#FFD8B4" color="#2E2422"><Link to={`/category/${"Máquina de Café"}`}>Máquinas de Café</Link></MenuItem>
+          <MenuItem bg="#FFD8B4" color="#2E2422"><Link to={`/category/${"Cápsulas de Café Nespresso"}`}>Cápsulas de Café</Link></MenuItem>
           <MenuItem bg="#FFD8B4" color="#2E2422"><Link to={"./Contact"}>Contacto</Link></MenuItem>
         </MenuList>
       </Menu>

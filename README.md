@@ -8,3 +8,7 @@ Tienda online de Café y artículos de Café, realizada en React + Vite con libr
 ---
 ### Contacto: ###
 👉 [LinkedIn](https://www.linkedin.com/in/maximilianovalli/)
+
+---
+### Navegación ###
+![Agosto 2023](The_Coffee_Store.gif)

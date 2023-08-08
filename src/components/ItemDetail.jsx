@@ -7,6 +7,7 @@ import {
   Center,
   CardHeader,
   Flex,
+  Box,
 } from "@chakra-ui/react";
 import { useParams } from "react-router-dom";
 
@@ -26,11 +27,11 @@ const ItemDetail = ({ products }) => {
                   {/* //estilo de la card */}
                   <Card bg="#19110F" color="#FFD8B4">
                     <CardHeader>
-                      <Heading size="md">{p.nombre}</Heading>
+                      <Heading size="lg">{p.nombre}</Heading>
                     </CardHeader>
                     <CardBody>
                       <Text>{p.descripcion}</Text>
-                      <Text>{p.category}</Text>
+                      <Text><Box>Categoria:</Box>{p.category}</Text>
                     </CardBody>
                   </Card>
                 </Center>
