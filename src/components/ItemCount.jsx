@@ -1,8 +1,10 @@
 import {useEffect, useState} from 'react'
-import { Box, Button, ButtonGroup, Flex, IconButton } from '@chakra-ui/react'
+import { Box, Button, Flex, IconButton } from '@chakra-ui/react'
 import { AddIcon, MinusIcon } from '@chakra-ui/icons'
 
-const ItemCount = () => {
+const ItemCount = ({initial, onAdd}) => {
+  const [cantidadAgregada, setCantidadAgregada] = useState(0)
+ 
 
 const [contador, setContador]=useState(0)
 
@@ -29,6 +31,8 @@ const reset =()=>{
     <IconButton onClick={sumar} icon={<AddIcon />} color="#2E2422" margin="5px"></IconButton>
     <IconButton onClick={restar} icon={<MinusIcon />} color="#2E2422" margin="5px"></IconButton>
     <Button onClick={reset} margin="5px">Reset</Button>
+    <Button onClick={()=> onAdd(contador)} margin="5px">Agregar al Carrito</Button>
+    
     </Flex>
   )
 }

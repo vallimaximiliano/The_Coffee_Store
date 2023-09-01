@@ -121,9 +121,7 @@ const ItemListContainer = () => {
 
   return (
     <Flex bg="#2E2422">
-      <ItemList
-      products={productosFiltrados}
-      />
+      { category ? <ItemList products={productosFiltrados} /> : <ItemList products={productos} />}
     </Flex>
   );
 };

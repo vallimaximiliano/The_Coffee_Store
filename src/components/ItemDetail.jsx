@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext, useState } from "react";
 import {
   Card,
   CardBody,
@@ -9,12 +9,26 @@ import {
   Flex,
   Box,
 } from "@chakra-ui/react";
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
+import ItemCount from "./ItemCount";
+import { CartContext } from "../context/ShopCartContext";
 
 const ItemDetail = ({ products }) => {
   const { id } = useParams();
-  console.log(products);
+  
+  const { cart, setCart, comision } = useContext(CartContext)
+
   const productosFiltrados = products.filter((products) => products.id == id);
+  const acumuladoCarrito = [...cart]
+
+
+  const [cantidadAgregada, setCantidadAgregada] = useState(0)
+  const handleOnAdd = (contador) => {
+    setCantidadAgregada(contador);
+    const producto = {id, contador};
+    setCart(prevCart => [...prevCart, producto]);
+}
+
 
   return (
     <div>
@@ -32,7 +46,16 @@ const ItemDetail = ({ products }) => {
                     <CardBody>
                       <Text>{p.descripcion}</Text>
                       <Text><Box>Categoria:</Box>{p.category}</Text>
-                    </CardBody>
+                      
+                      
+                      {
+                        cantidadAgregada > 0 ? (
+                          <Link to="../Cart">Terminar compra</Link>
+                        ) : (
+                          <ItemCount initial={1} onAdd={handleOnAdd} />
+                        )
+                      }
+                      </CardBody>
                   </Card>
                 </Center>
               </div>

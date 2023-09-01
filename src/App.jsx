@@ -6,27 +6,30 @@ import About from "./components/About";
 import Contact from "./components/Contact";
 import ItemListContainer from "./components/ItemListContainer";
 import ItemDetailContainer from "./components/ItemDetailContainer";
-import ItemCount from "./components/ItemCount";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import ShopCartContext from "./context/ShopCartContext";
 
 function App() {
   return (
 
     
     <BrowserRouter>
+    <ShopCartContext>
       <NavBar />
-
+      
       <Routes>
-        {/* 
-        <ItemCount /> */}
         <Route exact path="/" element={<Home /> }/>
         <Route exact path="/about" element={<About />}/>
         <Route exact path="/contact" element={<Contact />}/>
         <Route exact path="/cart" element={<Cart />}/>
         <Route exact path="/category/:category" element={<ItemListContainer />}/>
         <Route exact path="/item/:id" element={<ItemDetailContainer />}/>
+        <Route exact path="/contact" element={<Cart />}/>
       </Routes>
+      
+      </ShopCartContext>
     </BrowserRouter>
+    
   );
 }
 
